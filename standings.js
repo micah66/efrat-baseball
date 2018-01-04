@@ -1,3 +1,8 @@
+function populateElementWithText (id, text) {
+  var element = document.getElementById(id)
+  element.innerHTML = text
+}
+
 const gameResults = [
   {
     away: {name:'Pina Chama', score:4},
@@ -107,8 +112,20 @@ const statsByTeam = Object.keys(gameResultsByTeam).reduce((statsByTeamSoFar, tea
 
 }, {})
 
+const htmlStandings = statsByTeam => '' +
+    '<tr>' +
+      '<th scope="row">' + teamName + '</th>' +
+      '<td>' + stats.w + '</td>' +
+      '<td>' + stats.l + '</td>' +
+      '<td>' + stats.t + '</td>' +
+      '<td>' + stats.wp + '</td>' +
+      '<td>' + stats.rs + '</td>' +
+      '<td>' + stats.ra + '</td>' +
+      '<td>' + stats.rd + '</td>' +
+    '</tr>'
+  .join('')
 
-
+populateElementWithText('js-standings', htmlStandings)
 console.log(statsByTeam)
 
 console.log()
