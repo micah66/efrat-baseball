@@ -75,7 +75,6 @@ const gameResultsByTeam = gameResults.reduce((gameResultsByTeamSoFar, gameResult
 
   return gameResultsByTeamSoFar
 }, {})
-console.log(gameResultsByTeam)
 
 const isHome = (teamName, gameResult) => gameResult.home.name === teamName
 
@@ -112,9 +111,24 @@ const statsByTeam = Object.keys(gameResultsByTeam).reduce((statsByTeamSoFar, tea
 
 }, {})
 
-const htmlStandings = statsByTeam => '' +
+const sortedStandings = Object
+  .keys(statsByTeam)
+  .map((teamName) => Object.assign(statsByTeam[teamName], {teamName: teamName}))
+  .sort((teamStats, otherTeamStats) => {
+    const byWinningPercentage = otherTeamStats.wp - teamStats.wp
+
+    if (byWinningPercentage === 0) {
+      return otherTeamStats.rd - teamStats.rd
+    }
+
+    return byWinningPercentage
+  })
+
+
+
+const htmlStandings = sortedStandings.map((stats) => '' +
     '<tr>' +
-      '<th scope="row">' + teamName + '</th>' +
+      '<th scope="row">' + stats.teamName + '</th>' +
       '<td>' + stats.w + '</td>' +
       '<td>' + stats.l + '</td>' +
       '<td>' + stats.t + '</td>' +
@@ -123,53 +137,7 @@ const htmlStandings = statsByTeam => '' +
       '<td>' + stats.ra + '</td>' +
       '<td>' + stats.rd + '</td>' +
     '</tr>'
+  )
   .join('')
 
 populateElementWithText('js-standings', htmlStandings)
-console.log(statsByTeam)
-
-console.log()
-// var firstPlace =
-//
-// // Win: Team that scores more runs
-// // Loss: Team that scores fewer runs
-// function awayWin() {
-//   if (awayScore > homeScore) {
-//     teams[awayTeam][w] += 1
-//     teams[homeTeam][l] += 1
-//     teams[awayTeam][v] += 0.5
-//     teams[homeTeam][v] -= 0.5
-//   }
-// }
-//
-// function homeWin() {
-//   if (awayScore < homeScore) {
-//     teams[homeTeam][w] += 1
-//     teams[awayTeam][l] += 1
-//     teams[homeTeam][v] += 0.5
-//     teams[awayTeam][v] -= 0.5
-//   }
-// }
-//
-// // Tie: Neither team scores more runs
-// function tieGame() {
-//   if (awayScore === homeScore) {
-//   teams[awayTeam][t] += 1
-//   teams[homeTeam][t] += 1
-//   }
-// }
-//
-// // Games Behind: Number of game a team is behind the first place team
-//   //[(Leading Team W - Team W) + (Team L - Leading Team L)] / 2
-// function gameBehind() {
-//   teams[gb] = ''
-//   teams[gb] +=
-// }
-//
-// // Runs Scored: Sum of runs for
-// function runsScored() {
-//   teams[rs] =
-// }
-//
-// // Runs Allowed: Sum of runs scored by opponents
-// // Runs Differential: Runs Scored - Runs Allowed
