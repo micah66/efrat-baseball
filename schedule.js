@@ -3,13 +3,6 @@ function populateElementWithText (id, text) {
   element.innerHTML = text
 }
 
-// Create the data
-function Game(date, time, away, home) {
-  this.date = date
-  this.time = time
-  this.away = away
-  this.home = home
-}
 
 const colorOfTeam = {
   'Pina Chama': 'pina',
@@ -19,20 +12,20 @@ const colorOfTeam = {
 }
 
 var games = [
-    new Game("Sept 1st", "12:45", "Pina Chama", "Scorpions"),
-    new Game("Sept 1st", "14:45", "Papa Spice", "World Ventures"),
-    new Game("Sept 8th", "12:45", "Scorpions", "World Ventures"),
-    new Game("Sept 8th", "14:45", "Pina Chama", "Papa Spice"),
-    new Game("Sept 15th", "12:45", "World Ventures", "Pina Chama"),
-    new Game("Sept 15th", "14:45", "Papa Spice", "Scorpions"),
-    new Game("Sept 20th", "12:45", "Pina Chama", "Papa Spice"),
-    new Game("Sept 20th", "14:45", "World Ventures", "Scorpions"),
-    new Game("Oct 13th", "12:45", "Scorpions", "Papa Spice"),
-    new Game("Oct 13th", "14:45", "Pina Chama", "World Ventures"),
-    new Game("Oct 20th", "12:45", "World Ventures", "Papa Spice"),
-    new Game("Oct 20th", "14:45", "Scorpions", "Pina Chama"),
-    new Game("Oct 27th", "12:45", "Scorpions", "World Ventures"),
-    new Game("Oct 27th", "14:45", "Papa Spice", "Pina Chama")
+    {date: "Sept 1st", time: "12:45", away: "Pina Chama", home: "Scorpions"},
+    {date: "Sept 1st", time: "14:45", away: "Papa Spice", home: "World Ventures"},
+    {date: "Sept 8th", time: "12:45", away: "Scorpions", home: "World Ventures"},
+    {date: "Sept 8th", time: "14:45", away: "Pina Chama", home: "Papa Spice"},
+    {date: "Sept 15th", time:  "12:45", away: "World Ventures", home: "Pina Chama"},
+    {date: "Sept 15th", time:  "14:45", away: "Papa Spice", home: "Scorpions"},
+    {date: "Sept 20th", time:  "12:45", away: "Pina Chama", home: "Papa Spice"},
+    {date: "Sept 20th", time:  "14:45", away: "World Ventures", home: "Scorpions"},
+    {date: "Oct 13th", time: "12:45", away: "Scorpions", home: "Papa Spice"},
+    {date: "Oct 13th", time: "14:45", away: "Pina Chama", home: "World Ventures"},
+    {date: "Oct 20th", time: "12:45", away: "World Ventures", home: "Papa Spice"},
+    {date: "Oct 20th", time: "14:45", away: "Scorpions", home: "Pina Chama"},
+    {date: "Oct 27th", time: "12:45", away: "Scorpions", home: "World Ventures"},
+    {date: "Oct 27th", time: "14:45", away: "Papa Spice", home: "Pina Chama"}
 ]
 
 const htmlString = games
