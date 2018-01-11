@@ -34,5 +34,5 @@ schedule.onreadystatechange = function() {
     //console.log(jschedule.games)
   }
 }
-schedule.open("GET", "schedule.JSON", true)
+schedule.open("GET", "schedule.json", true)
 schedule.send()
