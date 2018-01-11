@@ -1,88 +1,148 @@
 {
   "games": [
-      {
-        "date": "Sept 1st",
-        "time": "12:45",
-        "away": "Pina Chama",
-        "home": "Scorpions"
-      },
-      {
-        "date": "Sept 1st",
-        "time": "14:45",
-        "away": "Papa Spice",
-        "home": "World Ventures"
-      },
-      {
-        "date": "Sept 8th",
-        "time": "12:45",
-        "away": "Scorpions",
-        "home": "World Ventures"
-      },
-      {
-        "date": "Sept 8th",
-        "time": "14:45",
-        "away": "Pina Chama",
-        "home": "Papa Spice"
-      },
-      {
-        "date": "Sept 15th",
-        "time": "12:45",
-        "away": "World Ventures",
-        "home": "Pina Chama"
-      },
-      {
-        "date": "Sept 15th",
-        "time": "14:45",
-        "away": "Papa Spice",
-        "home": "Scorpions"
-      },
-      {
-        "date": "Sept 20th",
-        "time": "12:45",
-        "away": "Pina Chama",
-        "home": "Papa Spice"
-      },
-      {
-        "date": "Sept 20th",
-        "time": "14:45",
-        "away": "World Ventures",
-        "home": "Scorpions"
-      },
-      {
-        "date": "Oct 13th",
-        "time": "12:45",
-        "away": "Scorpions",
-        "home": "Papa Spice"
-      },
-      {
-        "date": "Oct 13th",
-        "time": "14:45",
-        "away": "Pina Chama",
-        "home": "World Ventures"
-      },
-      {
-        "date": "Oct 20th",
-        "time": "12:45",
-        "away": "World Ventures",
-        "home": "Papa Spice"
-      },
-      {
-        "date": "Oct 20th",
-        "time": "14:45",
-        "away": "Scorpions",
-        "home": "Pina Chama"
-      },
-      {
-        "date": "Oct 27th",
-        "time": "12:45",
-        "away": "Scorpions",
-        "home": "World Ventures"
-      },
-      {
-        "date": "Oct 27th",
-        "time": "14:45",
-        "away": "Papa Spice",
-        "home": "Pina Chama"
-      }
+    {
+      "date": "Sept 1st",
+      "time": "12:45",
+      "away": "Pina Chama",
+      "home": "Scorpions"
+    },
+    {
+      "date": "Sept 1st",
+      "time": "14:45",
+      "away": "Papa Spice",
+      "home": "World Ventures"
+    },
+    {
+      "date": "Sept 8th",
+      "time": "12:45",
+      "away": "Scorpions",
+      "home": "World Ventures"
+    },
+    {
+      "date": "Sept 8th",
+      "time": "14:45",
+      "away": "Pina Chama",
+      "home": "Papa Spice"
+    },
+    {
+      "date": "Sept 15th",
+      "time": "12:45",
+      "away": "World Ventures",
+      "home": "Pina Chama"
+    },
+    {
+      "date": "Sept 15th",
+      "time": "14:45",
+      "away": "Papa Spice",
+      "home": "Scorpions"
+    },
+    {
+      "date": "Sept 20th",
+      "time": "12:45",
+      "away": "Pina Chama",
+      "home": "Papa Spice"
+    },
+    {
+      "date": "Sept 20th",
+      "time": "14:45",
+      "away": "World Ventures",
+      "home": "Scorpions"
+    },
+    {
+      "date": "Oct 13th",
+      "time": "12:45",
+      "away": "Scorpions",
+      "home": "Papa Spice"
+    },
+    {
+      "date": "Oct 13th",
+      "time": "14:45",
+      "away": "Pina Chama",
+      "home": "World Ventures"
+    },
+    {
+      "date": "Oct 20th",
+      "time": "12:45",
+      "away": "World Ventures",
+      "home": "Papa Spice"
+    },
+    {
+      "date": "Oct 20th",
+      "time": "14:45",
+      "away": "Scorpions",
+      "home": "Pina Chama"
+    },
+    {
+      "date": "Oct 27th",
+      "time": "12:45",
+      "away": "Scorpions",
+      "home": "World Ventures"
+    },
+    {
+      "date": "Oct 27th",
+      "time": "14:45",
+      "away": "Papa Spice",
+      "home": "Pina Chama"
+    }
+  ],
+
+  "gamesResults": [
+    {
+      "away": {"name":"Pina Chama", "score":4},
+      "home": {"name":"Scorpions", "score":10}
+    },
+    {
+      "away": {"name":"Papa Spice", "score":7},
+      "home": {"name":"World Ventures", "score":8}
+    },
+    {
+      "away": {"name":"Scorpions", "score":7},
+      "home": {"name":"World Ventures", "score":9}
+    },
+    {
+      "away": {"name":"Pina Chama", "score":12},
+      "home": {"name":"Papa Spice", "score":10}
+    },
+    {
+      "away": {"name":"World Ventures", "score":9},
+      "home": {"name":"Pina Chama", "score":4}
+    },
+    {
+      "away": {"name":"Papa Spice", "score":2},
+      "home": {"name":"Scorpions", "score":18}
+    },
+    {
+      "away": {"name":"Pina Chama", "score":7},
+      "home": {"name":"Papa Spice", "score":6}
+    },
+    {
+      "away": {"name":"World Ventures", "score":8},
+      "home": {"name":"Scorpions", "score":7}
+    },
+    {
+      "away": {"name":"Scorpions", "score":6},
+      "home": {"name":"Papa Spice", "score":10}
+    },
+    {
+      "away": {"name":"Pina Chama", "score":3},
+      "home": {"name":"World Ventures", "score":13}
+    },
+    {
+      "away": {"name":"World Ventures", "score":9},
+      "home": {"name":"Papa Spice", "score":6}
+    },
+    {
+      "away": {"name":"Scorpions", "score":4},
+      "home": {"name":"Pina Chama", "score":3}
+    },
+    {
+      "away": {"name":"Scorpions", "score":0},
+      "home": {"name":"World Ventures", "score":3}
+    },
+    {
+      "away": {"name":"Papa Spice", "score":5},
+      "home": {"name":"Pina Chama", "score":7}
+    }
   ]
+
 }
