@@ -14,7 +14,9 @@ const colorOfTeam = {
 
 const schedule = new XMLHttpRequest();
 schedule.onreadystatechange = function() {
-  if (schedule.readyState == 4 && schedule.status == 200) {
+  const XHR_DONE = 4
+  const HTTP_OK = 200
+  if (schedule.readyState == XHR_DONE && schedule.status == HTTP_OK) {
     const jschedule = JSON.parse(schedule.responseText)
     const htmlString = jschedule.games
       .map((game) => '' +
