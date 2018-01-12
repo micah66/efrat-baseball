@@ -17,8 +17,8 @@ schedule.onreadystatechange = function() {
   const XHR_DONE = 4
   const HTTP_OK = 200
   if (schedule.readyState == XHR_DONE && schedule.status == HTTP_OK) {
-    const jschedule = JSON.parse(schedule.responseText)
-    const htmlString = jschedule.games
+    const games = JSON.parse(schedule.responseText)
+    const htmlString = games
       .map((game) => '' +
         '<tr>' +
           '<td>' + game.date + '</td>' +
@@ -31,7 +31,6 @@ schedule.onreadystatechange = function() {
       populateElementWithText('js-schedule', htmlString)
 
 
-    //console.log(jschedule.games)
   }
 }
 schedule.open("GET", "schedule.json", true)
