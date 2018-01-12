@@ -8,8 +8,7 @@ standings.onreadystatechange = function() {
   const XHR_DONE = 4
   const HTTP_OK = 200
   if (standings.readyState == XHR_DONE && standings.status == HTTP_OK) {
-    const jstandings = JSON.parse(standings.responseText)
-    const gameResults = jstandings.gamesResults
+    const gameResults = JSON.parse(standings.responseText)
     const gameResultsByTeam = gameResults.reduce((gameResultsByTeamSoFar, gameResult) =>  {
       const awayTeamName = gameResult.away.name
       const homeTeamName = gameResult.home.name
@@ -92,5 +91,5 @@ standings.onreadystatechange = function() {
   }
 
 }
-standings.open("GET", "schedule.json", true)
+standings.open("GET", "standings.json", true)
 standings.send()
