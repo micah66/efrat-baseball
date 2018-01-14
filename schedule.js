@@ -3,7 +3,6 @@ function populateElementWithText (id, text) {
   element.innerHTML = text
 }
 
-
 const colorOfTeam = {
   'Pina Chama': 'pina',
   'Scorpions': 'scorpions',
@@ -11,27 +10,30 @@ const colorOfTeam = {
   'World Ventures': 'world'
 }
 
-
-const schedule = new XMLHttpRequest();
-schedule.onreadystatechange = function() {
-  const XHR_DONE = 4
-  const HTTP_OK = 200
-  if (schedule.readyState == XHR_DONE && schedule.status == HTTP_OK) {
-    const games = JSON.parse(schedule.responseText)
-    const htmlString = games
-      .map((game) => '' +
-        '<tr>' +
-          '<td>' + game.date + '</td>' +
-          '<td>' + game.time + '</td>' +
-          '<td class="' + colorOfTeam[game.away] + '">' + game.away + '</td>' +
-          '<td class="' + colorOfTeam[game.home] + '">' + game.home + '</td>' +
-        '</tr>'
-      )
-      .join('')
-      populateElementWithText('js-schedule', htmlString)
-
-
+function fetchJSON(file, callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    const XHR_DONE = 4
+    const HTTP_OK = 200
+    if (xhr.readyState == XHR_DONE && xhr.status == HTTP_OK) {
+      const data = JSON.parse(xhr.responseText)
+      callback(data)
+    }
   }
+  xhr.open("GET", file, true)
+  xhr.send()
 }
-schedule.open("GET", "schedule.json", true)
-schedule.send()
+
+fetchJSON('schedule.json', function (games) {
+  const htmlString = games
+    .map((game) => '' +
+      '<tr>' +
+        '<td>' + game.date + '</td>' +
+        '<td>' + game.time + '</td>' +
+        '<td class="' + colorOfTeam[game.away] + '">' + game.away + '</td>' +
+        '<td class="' + colorOfTeam[game.home] + '">' + game.home + '</td>' +
+      '</tr>'
+    )
+    .join('')
+    populateElementWithText('js-schedule', htmlString)
+})
