@@ -1,10 +1,3 @@
-const colorOfTeam = {
-  'Pina Chama': 'pina',
-  'Scorpions': 'scorpions',
-  'Papa Spice': 'papa',
-  'World Ventures': 'world'
-}
-
 fetchJSON('schedule.json', function (games) {
   const htmlString = games
     .map((game) => '' +

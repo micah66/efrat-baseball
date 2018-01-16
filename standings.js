@@ -64,7 +64,7 @@ fetchJSON("standings.json", function (gameResults) {
 
   const htmlStandings = sortedStandings.map((stats) => '' +
       '<tr>' +
-        '<th scope="row">' + stats.teamName + '</th>' +
+        '<th scope="row" class="'+colorOfTeam[stats.teamName]+'">' + stats.teamName + '</th>' +
         '<td>' + stats.w + '</td>' +
         '<td>' + stats.l + '</td>' +
         '<td>' + stats.t + '</td>' +
