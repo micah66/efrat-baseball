@@ -4,6 +4,9 @@
 
 table {
   border-spacing: 0;
+  border-top: 1px solid #000;
+  box-shadow: 0 0 8px #cdcdcd;
+  margin: 0 auto;
 }
 
 table td {
@@ -11,39 +14,50 @@ table td {
 }
 
 caption {
-  font-size: 4em;
+  font-size: 2em;
   font-weight: bold;
-  padding-bottom: 20px;
+  padding: 35px;
+  text-align: center;
 }
 
 .pina {
-  background-color: #00b052;
+  background-color: #00b052 !important;
 }
 
 .scorpions {
-  background-color: #ffbd01;
+  background-color: #ffbd01 !important;
 }
 
 .papa {
-  background-color: #b8cce4;
+  background-color: #b8cce4 !important;
 }
 
 .world {
-  background-color: #376092;
+  background-color: #376092 !important;
   color: white;
 }
 
-.schedule th, td {
+.standings th, .schedule th, td {
   text-align: left;
   padding: 10px 100px 10px 5px;
   border-right: solid black 1px;
   border-left: solid black 1px;
 }
-
-.schedule tr:nth-child(even) td {
+.standings th, .schedule th{
   border-bottom: solid black 1px;
-}
+  background-color: white;
 
+}
+.standings tr:nth-child(even), .schedule tr:nth-child(even) td {
+  border-bottom: solid black 1px;
+  background-color: white;
+}
+.standings td {
+  border: solid black 1px;
+}
+.standings th {
+  text-decoration: none;
+}
 tfoot td {
   font-size: .65em;
   font-style: italic;
