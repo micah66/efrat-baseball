@@ -4,7 +4,7 @@ fetchJSON('schedule.json', function (games) {
       '<tr>' +
         '<td>' + game.date + '</td>' +
         '<td>' + game.time + '</td>' +
-        '<td class="' + colorOfTeam[game.away] + '">' + game.away + '</td>' +
+        '<td class="' + colorOfTeam[game.away] + '">' + game.away + ' &#64;</td>' +
         '<td class="' + colorOfTeam[game.home] + '">' + game.home + '</td>' +
       '</tr>'
     )

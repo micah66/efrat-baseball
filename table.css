@@ -4,60 +4,91 @@
 
 table {
   border-spacing: 0;
-  border-top: 1px solid #000;
   box-shadow: 0 0 8px #cdcdcd;
   margin: 0 auto;
+  min-width: 65%;
 }
 
 table td {
   margin-bottom: 10px;
+  padding: 20px 30px 20px 30px;
 }
 
 caption {
   font-size: 2em;
-  font-weight: bold;
   padding: 35px;
   text-align: center;
 }
 
-.pina {
-  background-color: #00b052 !important;
-}
-
-.scorpions {
-  background-color: #ffbd01 !important;
-}
-
-.papa {
-  background-color: #b8cce4 !important;
-}
-
-.world {
-  background-color: #376092 !important;
-  color: white;
-}
-
-.standings th, .schedule th, td {
+.standings .pina {
+  border-left: solid 10px #00b052;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
   text-align: left;
-  padding: 10px 100px 10px 5px;
-  border-right: solid black 1px;
-  border-left: solid black 1px;
 }
-.standings th, .schedule th{
-  border-bottom: solid black 1px;
-  background-color: white;
+
+.standings .scorpions {
+  border-left: solid 10px #ffbd01;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+  text-align: left;
+}
+
+.standings .papa {
+  border-left: solid 10px #b8cce4;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+  text-align: left;
+}
+
+.standings .world {
+  border-left: solid 10px #376092;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+  text-align: left;
+}
+
+.schedule .pina {
+  border-left: solid 5px #00b052;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.schedule .scorpions {
+  border-left: solid 5px #ffbd01;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.schedule .papa {
+  border-left: solid 5px #b8cce4;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.schedule .world {
+  border-left: solid 5px #376092;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.standings th {
+  padding: 20px 30px 20px 30px;
+}
+.standings thead th {
+  /* border-bottom: solid black 1px; */
+  background-color: #e8e8e8;
 
 }
-.standings tr:nth-child(even), .schedule tr:nth-child(even) td {
-  border-bottom: solid black 1px;
-  background-color: white;
+.schedule tr:nth-child(even) td {
+  border-bottom: solid rgba(0,0,0,0.25) 1px;
 }
 .standings td {
-  border: solid black 1px;
+  background-color: white;
+  text-align: center;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+
 }
 .standings th {
   text-decoration: none;
 }
+
+abbr[title] {
+  text-decoration: none;
+}
+
 tfoot td {
   font-size: .65em;
   font-style: italic;
