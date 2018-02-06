@@ -61,14 +61,11 @@ fetchJSON("standings.json", function (gameResults) {
       return byWinningPercentage
     })
 
-const gamesBehindByTeam = sortedStandings.map((team) => {
-  const gamesBehind = ((sortedStandings[0].w - team.w) - (sortedStandings[0].l - team.l)) / 2
-  team.gb = gamesBehind
-  return gamesBehind
-}, {})
-
-  console.log(sortedStandings)
-  console.log(gamesBehindByTeam)
+  sortedStandings.map((team) => {
+    const gamesBehind = ((sortedStandings[0].w - team.w) - (sortedStandings[0].l - team.l)) / 2
+    team.gb = gamesBehind
+    return gamesBehind
+  })
 
 
 
