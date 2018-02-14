@@ -5,27 +5,31 @@
   <link rel="stylesheet" href="normalize.css"/>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="table.css" />
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700i" rel="stylesheet">
 </head>
   <body>
     <header>
-      <h1 id="banner">Efrat Baseball</h1>
       <nav>
         <ul class="bar">
-          <li class="navbar"><a href="index.html">Home</a></li>
+          <li class="navbar" id="banner"><a href="index.html">&#9918; Efrat Baseball</a></li>
           <li class="navbar"><a href="schedule.html">Schedule</a></li>
-          <li class="navbar"><a href="standings.html">Standings</a></li>
+          <li class="navbar selected"><a href="standings.html">Standings</a></li>
+          <li class="navbar"><a href="standings.html">Register</a></li>
+          <li class="navbar"><a href="standings.html">Comments</a></li>
+          <li class="navbar"><a href="standings.html">Gallery</a></li>
+          <li class="navbar"><a href="standings.html">Contacts</a></li>
         </ul>
       </nav>
     </header>
     <table class="standings">
       <caption>Fall Ball 2017</caption>
       <thead>
-        <th scope="col">Team</th>
+        <th scope="col"></th>
         <th scope="col"><abbr title="Wins">W</abbr></th>
         <th scope="col"><abbr title="Losses">L</abbr></th>
         <th scope="col"><abbr title="Ties">T</abbr></th>
         <th scope="col"><abbr title="Games Behind">GB</abbr></th>
+        <th scope="col"><abbr title="Win Percentage">PCT</abbr></th>
         <th scope="col"><abbr title="Runs Scored">RS</abbr></th>
         <th scope="col"><abbr title="Runs Allowed">RA</abbr></th>
         <th scope="col"><abbr title="Run Differential">RD</abbr></th>
@@ -36,5 +40,7 @@
     <script src="shared.js"></script>
     <script src="standings.js"></script>
   </body>
-
+  <footer>
+    <p>For questions or info, contact <a href="">info@efratbaseball.com</a></p>
+  </footer>
 </html>

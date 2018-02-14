@@ -1,3 +1,10 @@
+const colorOfTeam = {
+  'Pina Chama': 'pina',
+  'Scorpions': 'scorpions',
+  'Papa Spice': 'papa',
+  'World Ventures': 'world'
+}
+
 function populateElementWithText (id, text) {
   var element = document.getElementById(id)
   element.innerHTML = text

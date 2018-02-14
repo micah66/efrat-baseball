@@ -4,44 +4,89 @@
 
 table {
   border-spacing: 0;
+  box-shadow: 0 0 8px #cdcdcd;
+  margin: 0 auto;
+  min-width: 65%;
 }
 
 table td {
   margin-bottom: 10px;
+  padding: 20px 30px 20px 30px;
 }
 
 caption {
-  font-size: 4em;
-  font-weight: bold;
-  padding-bottom: 20px;
+  font-size: 2em;
+  padding: 35px;
+  text-align: center;
 }
 
-.pina {
-  background-color: #00b052;
-}
-
-.scorpions {
-  background-color: #ffbd01;
-}
-
-.papa {
-  background-color: #b8cce4;
-}
-
-.world {
-  background-color: #376092;
-  color: white;
-}
-
-.schedule th, td {
+.standings .pina {
+  border-left: solid 10px #00b052;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
   text-align: left;
-  padding: 10px 100px 10px 5px;
-  border-right: solid black 1px;
-  border-left: solid black 1px;
 }
 
+.standings .scorpions {
+  border-left: solid 10px #ffbd01;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+  text-align: left;
+}
+
+.standings .papa {
+  border-left: solid 10px #b8cce4;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+  text-align: left;
+}
+
+.standings .world {
+  border-left: solid 10px #376092;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+  text-align: left;
+}
+
+.schedule .pina {
+  border-left: solid 5px #00b052;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.schedule .scorpions {
+  border-left: solid 5px #ffbd01;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.schedule .papa {
+  border-left: solid 5px #b8cce4;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.schedule .world {
+  border-left: solid 5px #376092;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+}
+
+.standings th {
+  padding: 20px 30px 20px 30px;
+}
+.standings thead th {
+  /* border-bottom: solid black 1px; */
+  background-color: #e8e8e8;
+
+}
 .schedule tr:nth-child(even) td {
-  border-bottom: solid black 1px;
+  border-bottom: solid rgba(0,0,0,0.25) 1px;
+}
+.standings td {
+  background-color: white;
+  text-align: center;
+  border-bottom: solid 1px rgba(0,0,0,0.25);
+
+}
+.standings th {
+  text-decoration: none;
+}
+
+abbr[title] {
+  text-decoration: none;
 }
 
 tfoot td {

@@ -5,34 +5,31 @@
   <link rel="stylesheet" href="normalize.css"/>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="table.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700i" rel="stylesheet">
 </head>
   <body>
     <header>
-      <h1 id="banner">Efrat Baseball</h1>
       <nav>
         <ul class="bar">
-          <li class="navbar"><a href="index.html">Home</a></li>
-          <li class="navbar"><a href="schedule.html">Schedule</a></li>
+          <li class="navbar" id="banner"><a href="index.html">&#9918; Efrat Baseball</a></li>
+          <li class="navbar selected"><a href="schedule.html">Schedule</a></li>
           <li class="navbar"><a href="standings.html">Standings</a></li>
+          <li class="navbar"><a href="standings.html">Register</a></li>
+          <li class="navbar"><a href="standings.html">Comments</a></li>
+          <li class="navbar"><a href="standings.html">Gallery</a></li>
+          <li class="navbar"><a href="standings.html">Contacts</a></li>
         </ul>
       </nav>
     </header>
-
     <table class="schedule">
       <caption>Fall Ball 2017</caption>
-      <thead>
-        <tr>
-          <th scope="col">Date</th>
-          <th scope="col">Time</th>
-          <th scope="col">Away</th>
-          <th scope="col">Home</th>
-        </tr>
-      </thead>
       <tbody id="js-schedule">
       </tbody>
     </table>
     <script src="shared.js"></script>
     <script src="schedule.js"></script>
   </body>
-
+  <footer>
+    <p>For questions or info, contact <a href="">info@efratbaseball.com</a></p>
+  </footer>
 </html>
