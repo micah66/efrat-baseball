@@ -10,16 +10,16 @@ function populateElementWithText (id, text) {
   element.innerHTML = text
 }
 
-function fetchJSON(file, callback) {
-  const xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
+function fetchJSON (file, callback) {
+  const xhr = new XMLHttpRequest()
+  xhr.onreadystatechange = function () {
     const XHR_DONE = 4
     const HTTP_OK = 200
-    if (xhr.readyState == XHR_DONE && xhr.status == HTTP_OK) {
+    if (xhr.readyState === XHR_DONE && xhr.status === HTTP_OK) {
       const data = JSON.parse(xhr.responseText)
       callback(data)
     }
   }
-  xhr.open("GET", file, true)
+  xhr.open('GET', file, true)
   xhr.send()
 }

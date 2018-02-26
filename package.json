@@ -1,0 +1,23 @@
+{
+  "name": "efratbb",
+  "version": "1.0.0",
+  "description": "Efrat Baseball",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micah66/efrat-baseball.git"
+  },
+  "author": "Micah Gordon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micah66/efrat-baseball/issues"
+  },
+  "homepage": "https://github.com/micah66/efrat-baseball#readme",
+  "dependencies": {
+    "nodemon": "^1.15.1"
+  }
+}
