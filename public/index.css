@@ -39,7 +39,9 @@ header {
 
 .navbar:not(#banner) a:hover {
   font-weight: 400;
-  font-size: 1.21em;
+  /* font-size: 1.21em; */
+  /* text-decoration: underline; */
+  color: rgba(255,255,255,0.4);
 }
 
 #banner {
