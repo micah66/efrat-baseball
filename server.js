@@ -1,83 +1,34 @@
-const http = require('http')
 const fs = require('fs')
-const path = require('path')
+const express = require('express')
+const bodyParser = require('body-parser')
 
-const extensions = {
-  '.txt': 'text/plain',
-  '.html': 'text/html',
-  '.css': 'text/css',
-  '.js': 'application/javascript',
-  '.json': 'application/json'
-}
-function parseData(body/*foo=bar&baz=qux*/) {
-  body.split('&')/*['foo=bar', 'baz=qux']*/
-  .map(string => string.split('=')) /*[['foo', 'bar'], ['baz', 'qux']]*/
-  .reduce((), {})
-} // {foo:"bar", baz:"qux"}
+const app = express()
 
-// standings/index.html
+app.use(express.static('public'))
 
-// <link rel="stylesheet" href="../standings.css" />
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
-/*
-skillsilo.com/spanish => spanish/index.html, spanish/app.js, spanish/style.css
-skillsilo.com/japanese => japanese/index.html
-*/
-function fixURL (url) {
-  if (url.slice(-1) === '/') {
-    url += 'index.html'
-  } else if (path.extname(url) === '') {
-    url += '/index.html'
-  }
+app.post('/register', (req, res) => {
+  const registerInfo = req.body
 
-  return url
-}
+  fs.readFile('roster.json', 'utf8', (err, data) => {
+    console.log(err)
+    if (err && err.code !== 'ENOENT') {
+      throw err
+    } else {
+      const roster = err ? [] : JSON.parse(data)
 
-const server = http.createServer((req, res) => {
-  // http://localhost:3000/ => 404
-  // http://localhost:3000/index.html
-  // / => /index.html
-  // /standings => /standings/index.html
-  // /standings.html x> /standings.html/index.html
-  // /standings/ => /standings/index.html
-  const filePath = path.join(__dirname, fixURL(req.url))
-
-  if (req.method === 'GET') {
-    fs.readFile(filePath, 'utf8', (err, file) => {
-      if (err) {
-        res.statusCode = 404
-        res.write('404: File not found.')
-        res.end()
-      } else {
-        const ext = path.extname(filePath)
-        res.writeHead(200, {'Content-Type': extensions[ext]})
-        res.write(file)
-        res.end()
-      }
-    })
-  } else if (req.method === 'POST') {
-    req.on('data', (chunk) => {
-      let body = ''
-      body += chunk
-      // childfistname=micah&childlastname=gordon&
-      const registerInfo = parseData(body)
-      // const registerInfo = body.split('&')
-      //   .map((pair) => pair.split('='))
-      //   .reduce((obj, [key, val]) => {
-      //     obj[key] = val
-      //     return obj
-      //   }, {})
-      const rosterAddition = JSON.stringify(registerInfo, null, 2)
-      fs.appendFile('roster.json', rosterAddition, (err) => {
+      roster.push(registerInfo)
+      fs.writeFile('roster.json', JSON.stringify(roster, null, 2), (err) => {
         if (err) {
         }
+        res.sendStatus(201)
       })
-    })
-    req.on('end', () => {
-      res.end('A request has been made in your honor.')
-    })
-  }
+    }
+  })
 })
-server.listen(3000, () => {
-  console.log('Serving on port 3000...')
+
+app.listen(3000, () => {
+  console.log('Listening on port 3000...')
 })
