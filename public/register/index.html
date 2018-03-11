@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Efrat Baseball | Register</title>
+  <link rel="stylesheet" href="../normalize.css"/>
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../register/register.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700i" rel="stylesheet">
+</head>
+  <body>
+    <header>
+      <nav>
+        <ul class="bar">
+          <li class="navbar" id="banner"><a href="../index.html">&#9918; Efrat Baseball</a></li>
+          <li class="navbar"><a href="../schedule/index.html">Schedule</a></li>
+          <li class="navbar"><a href="../standings/index.html">Standings</a></li>
+          <li class="navbar selected"><a href="../register/index.html">Register</a></li>
+          <li class="navbar"><a href="standings.html">Comments</a></li>
+          <li class="navbar"><a href="standings.html">Gallery</a></li>
+          <li class="navbar"><a href="standings.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <form action="/register" method="post">
+      <div id="registration-form">
+        <h1>Registration</h1>
+        <fieldset id="childInfo">
+          <legend>Child's Information</legend>
+          <div>
+            <label for="childFirstname">First Name:</label>
+            <input type="text" id="childFirstname" name="childFirstname" />
+          </div>
+          <div>
+            <label for="childLastname">Last Name:</label>
+            <input type="text" id="childLastname" name="childLastname" />
+          </div>
+          <div>
+            <label for="childAge">Age:</label>
+            <input type="text" id="childAge" name="childAge" />
+          </div>
+
+          <select id="experience" name="experience">
+            <option>Baseball Experience</option>
+            <option>0 Years</option>
+            <option>1 Years</option>
+            <option>2 Years</option>
+            <option>3 Years</option>
+            <option>4 Years</option>
+            <option>5+ Years</option>
+          </select>
+        </fieldset>
+        <fieldset id="parentInfo">
+          <legend>Parents' Information</legend>
+          <div>
+            <label for="mothersFirstname">Mother's First Name:</label>
+            <input type="text" id="mothersFirstname" name="mothersFirstname" />
+          </div>
+          <div>
+            <label for="fathersFirstname">Father's First Name:</label>
+            <input type="text" id="fathersFirstname" name="fathersFirstname" />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div>
+            <label for="emergencyPhone">Emergency Alternate Phone Number:</label>
+            <input type="tel" id="emergencyPhone" name="emergencyPhone" />
+          </div>
+        </fieldset>
+        <button type="submit">Register</button>
+        <button type="reset">Start Over</button>
+      </div>
+    </form>
+  </body>
+  <footer>
+    <p>For questions or info, contact <a href="">info@efratbaseball.com</a></p>
+  </footer>
+</html>
